@@ -1,0 +1,309 @@
+/* Author: Clayton Rieck */
+
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@font-face {
+	font-family: CustomBebas;
+	src:url("../fonts/BebasNeue.otf");
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+}
+
+.header {
+
+	min-width: 1000px;
+	width: 100%;
+	height: 200px;
+	margin: 0 auto;
+	padding-top: 60px;
+	text-align: center;
+	font-family: CustomBebas;
+	font-size: 75px;
+
+	background-color: #152C47;
+	color: #C7D0D9;
+	box-shadow: 0 2px 2px #d8d8d8;
+}
+
+.logo {
+	width: 100px;
+	height: 100px;
+	padding-right: 10px;
+}
+
+.container-wrapper {
+	position: relative;
+	width: 1000px;
+	margin: 50px auto;
+}
+
+.container {
+	position: absolute;
+}
+
+.issues li {
+	overflow: auto;
+	margin: 20px 0px;
+}
+
+.issue {
+	clear: both;
+	min-height: 140px;
+	margin: 10px 0px;
+}
+
+.user_info {
+
+	display: block;
+	width: 18%;
+	height: 100%;
+	float: left;
+	margin-left: 5px;
+
+}
+
+	.gravatar {
+		display: block;
+		margin: 0 auto;
+		width: 100px;
+		height: 100px;
+		border-radius: 50px;
+	}
+
+	.username {
+		text-align: center;
+		padding: 2px 0px;
+		color: #000;
+		margin: 5% 0%;
+	}
+
+.arrow-left {
+	width: 0; 
+	height: 0; 
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent; 
+	float: right;
+	border-right:15px solid #d8d8d8;
+
+	margin-top: 30px;
+}
+
+.issue_description {
+	display: block;
+
+	cursor: pointer;
+
+	width: 80%;
+	min-height: 100px;
+	float: right;
+
+	border: 1px solid #d8d8d8;
+	border-radius: 2px;
+
+	background-color: #d8d8d8;
+	
+	padding: 15px 15px;
+
+}
+
+	.title {
+		width: 100%;
+		font-size: 30px;
+	}
+
+	.number {
+		font-size: 25px;
+		margin-top: 2px;
+		margin-bottom: 10px;
+		color: #7f8c8d;
+	}
+
+	.labels {
+		width: 100%;
+		padding: 10px 0px;
+	}
+
+		.label_items {
+			height: 30px;
+		}
+
+			.label_items .label {
+				min-width: 40px;
+				height: 100%;
+				margin: 0px 5px;
+				float: left;
+				padding: 5px 10px;
+
+				border-radius: 5px;
+			}
+
+.details-wrapper {
+	position: absolute;
+	opacity: 0;
+}
+
+.detail-container {
+	z-index: 2;
+	max-height: 500px;
+	width: 1000px;
+	background-color: #fff;
+	border-radius: 3px;
+	box-shadow: 0 0 2px #d8d8d8;
+	overflow: auto;
+}
+	.detail-header {
+		width: 100%;
+		min-height: 50px;
+
+		padding: 15px 15px;
+	}
+
+		.detail-title {
+			font-family: CustomBebas;
+			font-size: 50px;
+			margin: 0 auto;
+			float: left;
+			width: 75%;
+		}
+
+		.state {
+			font: 30px Helvetica, arial, freesans, clean, sans-serif;
+			width: 100px;
+			float: right;
+			color: #fff;
+			text-align: center;
+			height: 50px;
+
+			border-radius: 5px;
+			padding: 5px 0px;
+		}
+
+		.detail-labels {
+			float: left;
+			width: 100%;
+		}
+
+	.detail {
+		cursor: default;
+		margin-right: 25px;
+	}
+
+.divider {
+	width: 95%;
+	height: 50px;
+	float: left;
+
+	text-align: center;
+	font-size: 50px;
+	padding: 0px 10px;
+}
+
+.user_info.detail {
+	width: 150px;
+	margin: 10px 0px;
+	cursor: pointer;
+}
+
+.gravatar.detail {
+	width: 75px;
+	height: 75px;
+	margin: 0 auto;
+	cursor: pointer;
+}
+
+.username.detail {
+	padding-left: 5px;
+	margin-right: 0px;
+}
+
+.detail_comment {
+	height: 100px;
+}
+
+.issue_body.detail {
+	overflow-x: auto;
+}
+
+.bottom-buttons {
+	height: 50px;
+	width: 75px;
+	bottom: 0;
+	text-align: center;
+	padding-top: 17px;
+	color: #fff;
+	border-radius: 5px;
+	font-weight: 400px;
+	cursor: pointer;
+
+	margin-bottom: 10px;
+
+	transition: opacity 0.2s ease;
+	-webkit-transition: opacity 0.2s ease;
+	-ms-transition: opactiy 0.2s ease;
+    -moz-transition: opacity 0.2s ease;
+	o-transition: opacity 0.2s ease;
+
+}
+
+	.bottom-buttons:hover {
+		opacity: 0.5;
+	}
+
+#back {
+	background-color: #e74c3c;
+	float: left;
+}
+
+#next {
+	background-color: #2ecc71;
+	float: right;
+}
